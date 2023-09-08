@@ -17,7 +17,7 @@ int main(){
         p[price]++; vec.emplace_back(price, name);
     }
     sort(vec.begin(), vec.end(), [](pls a, pls b){
-        return a.first > b.first;
+        return a.f > b.f;
     });//lambda function, sorted by price, decreased
     for (auto [price, name]: vec){
         if (p[price] == 1){//if price is unique, output answer end exit
